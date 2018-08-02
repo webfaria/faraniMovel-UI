@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Component } from '@angular/core';
 import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable } from 'rxjs/Rx'; // IMPORTANTE: IMPORT ATUALIZADO
 import { StorageService } from '../services/storage.service';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 
- @Injectable()
+@Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
 
     constructor(public storage: StorageService, public alertCtrl: AlertController) {
